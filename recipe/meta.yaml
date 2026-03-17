@@ -1,5 +1,5 @@
 {% set name = "libsmu" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/analogdevicesinc/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 290d72bf5cec9ceab0030f6a4bc49bfd962aff56997aebebf70a20cb4a6bf77a
+  sha256: 290d72bf5cec9ceab0030f6a4bc49bfd962aff56997aebebf70a20cb4a6bf77b
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('libsmu', max_pin='x.x') }}
 
