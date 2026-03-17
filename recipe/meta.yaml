@@ -18,12 +18,12 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - {{ cdt('libudev-devel') }}  # [linux]
     - cmake
     - make  # [not win]
     - ninja  # [win]
     - pkg-config  # [not win]
   host:
+    - libudev  # [linux]
     - libboost-devel
     - _openmp_mutex  # [linux]
     - libusb >=1
